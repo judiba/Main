@@ -1,0 +1,43 @@
+#!/bin/bash
+chk=$(cat /etc/ssh/sshd_config |grep Banner )
+if echo "$chk" |grep -v "#Banner" |grep Banner > /dev/null 2> /dev/null
+then
+local=$(echo "$chk" |grep -v "#Banner" |grep Banner |awk '{print $2}')
+touch /etc/r3v1v3r/bannervps
+echo "De um nome ao Servidor"
+read -p ": " nome
+echo "Bem Vindo(a) ao Servidor $nome" > $local
+echo "Digite a mensagem para seu Banner"
+read -p ": " banner
+echo "$banner" >> $local
+echo "|P*R*O*I*B*I*D*O|" >> $local
+echo "|*xTorrents*xSPAM*xDDoS*xHACKING*xFLOOD| " >> $local
+echo "Informe seu Telegram para contato"
+read -p ":@ " telegram
+echo "Entre em contato pelo Telegram @$telegram" >> $local
+echo "|Config by: @judiba|" >> $local
+echo "|R3V1V3R VPS|" >> $local
+else
+echo "Banner /etc/r3v1v3r/bannervps" >> /etc/ssh/sshd_config
+service ssh restart > /dev/null 2> /dev/null
+service sshd restart > /dev/null 2> /dev/null
+fi
+
+function banner(){
+sshd_config_bak=$(cat /etc/ssh/sshd_config |grep -v "Banner")
+echo "$sshd_config_bak" > /etc/ssh/sshd_config
+echo "Banner /etc/r3v1v3r/bannervps" >> /etc/ssh/sshd_config
+service ssh restart 1>/dev/null 2>/dev/null
+service sshd restart 1>/dev/null 2>/dev/null
+if [ -f /etc/r3v1v3r/bannervps ]
+then
+banner=$(cat /etc/r3v1v3r/bannervps)
+else
+banner="Não há um banner no momento"
+fi
+echo -e "\033[1;32mBanner atual\n\n\033[1;37m$banner\n\033[0m"
+echo "Qual banner deseja adicionar (ctrl + c para sair )"
+read -p ": " bannervps
+echo "$bannervps" > /etc/r3v1v3r/bannervps
+service ssh restart 1> /dev/null 2>/dev/null
+service sshd restart 1>/dev/null 2>/dev/null

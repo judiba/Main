@@ -1,0 +1,130 @@
+#!/bin/bash
+
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo -e '\033[01;32m              O que deseja fazer ?\033[00;37m'
+echo " "
+echo -e 'Digite: \033[01;32m1\033[00;37m Para Instalar o VNC.'
+echo " "
+echo -e 'Digite: \033[01;32m2\033[00;37m Iniciar o VNC.'
+echo " "
+echo -e 'Digite: \033[01;32m3\033[00;37m Sair e Voltar Para o PackVPS.'
+echo " "
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo " "
+echo " "
+read -p "Responda: " -e -i 1 resposta
+
+if [[ "$resposta" = '1' ]]; then
+apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver sudo -y
+apt-get install -y iceweasel
+clear
+fi
+
+if [[ "$resposta" = '2' ]]; then
+echo -e "\033[1;34m ESCOLHA UMA SENHA e DEPOIS CONFIRMA\033[1;32m"
+sleep 3
+vncserver
+
+echo -e "\033[1;34m VNC se conecta usando o ip da vps na porta 5901\033[1;32m"
+echo -e "\033[1;34m Exemplo: 111.111.111.11:5901\033[1;32m"
+echo -e "\033[1;34m Para acessar a interface gráfica\033[1;32m"
+echo -e "\033[1;34m Baixe na PlayStore o VNC VIWER\033[1;32m"
+echo -e "\033[1;34m Coloque o Ip e a porta 5901\033[1;32m"
+echo -e "\033[1;34m PRONTO, AGORA SO USAR.\033[1;32m"
+sleep 7
+fi
+
+if [[ "$resposta" = '3' ]]; then
+PackVPS
+clear
+fi
+
+
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo -e '\033[01;32m              O que deseja fazer ?\033[00;37m'
+echo " "
+echo -e 'Digite: \033[01;32m1\033[00;37m Para Instalar o VNC.'
+echo " "
+echo -e 'Digite: \033[01;32m2\033[00;37m Iniciar o VNC.'
+echo " "
+echo -e 'Digite: \033[01;32m3\033[00;37m Sair e Voltar Para o PackVPS.'
+echo " "
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo " "
+echo " "
+read -p "Responda: " -e -i 2 resposta
+
+
+if [[ "$resposta" = '1' ]]; then
+
+apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver sudo -y
+apt-get install -y iceweasel
+clear
+fi
+
+
+clear
+if [[ "$resposta" = '2' ]]; then
+echo -e "\033[1;34m ESCOLHA UMA SENHA e DEPOIS CONFIRMA\033[1;32m"
+sleep 3
+vncserver
+
+echo -e "\033[1;34m VNC se conecta usando o ip da vps na porta 5901\033[1;32m"
+echo -e "\033[1;34m Exemplo: 111.111.111.11:5901\033[1;32m"
+echo -e "\033[1;34m Para acessar a interface gráfica\033[1;32m"
+echo -e "\033[1;34m Baixe na PlayStore o VNC VIWER\033[1;32m"
+echo -e "\033[1;34m Coloque o Ip e a porta 5901\033[1;32m"
+echo -e "\033[1;34m PRONTO, AGORA SO USAR.\033[1;32m"
+sleep 7
+fi
+
+
+if [[ "$resposta" = '3' ]]; then
+PackVPS
+clear
+fi
+
+
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo -e '\033[01;32m              O que deseja fazer ?\033[00;37m'
+echo " "
+echo -e 'Digite: \033[01;32m1\033[00;37m Para Instalar o VNC.'
+echo " "
+echo -e 'Digite: \033[01;32m2\033[00;37m Iniciar o VNC.'
+echo " "
+echo -e 'Digite: \033[01;32m3\033[00;37m Sair e Voltar Para o PackVPS.'
+echo " "
+echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
+echo " "
+echo " "
+read -p "Responda: " -e -i 3 resposta
+
+
+if [[ "$resposta" = '1' ]]; then
+
+apt-get install xfce4 xfce4-goodies gnome-icon-theme tightvncserver sudo -y
+apt-get install -y iceweasel
+clear
+fi
+
+
+clear
+if [[ "$resposta" = '2' ]]; then
+echo -e "\033[1;34m ESCOLHA UMA SENHA e DEPOIS CONFIRMA\033[1;32m"
+sleep 3
+vncserver
+
+echo -e "\033[1;34m VNC se conecta usando o ip da vps na porta 5901\033[1;32m"
+echo -e "\033[1;34m Exemplo: 111.111.111.11:5901\033[1;32m"
+echo -e "\033[1;34m Para acessar a interface gráfica\033[1;32m"
+echo -e "\033[1;34m Baixe na PlayStore o VNC VIWER\033[1;32m"
+echo -e "\033[1;34m Coloque o Ip e a porta 5901\033[1;32m"
+echo -e "\033[1;34m PRONTO, AGORA SO USAR.\033[1;32m"
+sleep 7
+fi
+
+
+if [[ "$resposta" = '3' ]]; then
+PackVPS
+clear
+fi

@@ -1,0 +1,331 @@
+#!/bin/bash
+
+echo "Configuração de Atualização"
+echo ""
+echo "        BY: @judiba"
+echo "        R3V1V3R VPS"
+echo "        Data de criação: 15/04/2017"
+echo "        Nome: PackVPS 1.0"
+echo " "
+read -p "De enter para continuar..."
+clear
+echo "        Escolha o sistema da sua vps"
+echo " "
+
+echo "
+1] Ubuntu 14
+2] Ubuntu 16
+3] Debian 7
+4] Debian 8
+5] CentOS
+6] Fedora
+7] sair"
+echo " "
+read -p "Escolha o numero da sua opção: " numero
+
+if [ "$numero" = "1" ]
+then
+clear
+apt-get install curl -y 1>/dev/null 2>/dev/null
+IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
+clear
+echo "    Seu IP [ $IP ] "
+read -p "Seu IP esta correto acima [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+clear
+echo ""
+fi
+
+if [ "$ta" = "n" ]
+then
+clear
+read -p "Digite seu IP: " IP2
+echo "Configurando sua vps..."
+apt-get update -y 1>/dev/null 2>/dev/null
+
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+if [ "$ta" = "s" ]
+then
+echo "Configurando sua vps..."
+apt-get update -y 1>/dev/null 2>/dev/null
+
+
+
+echo " Reniciando servicos"
+service ssh restart 1>/dev/null 2>/dev/null
+service squid3 reload 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+fi
+if [ "$numero" = "2" ]
+then
+clear
+apt-get install curl -y 1>/dev/null 2>/dev/null
+IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
+clear
+echo "    Seu IP [ $IP ] "
+read -p "Seu IP esta correto acima [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+clear
+echo ""
+fi
+
+if [ "$ta" = "n" ]
+then
+clear
+read -p "Digite seu IP: " IP2
+echo "Configurando sua vps..."
+apt-get update -y 1>/dev/null 2>/dev/null
+> /etc/payloads
+echo " Reniciando servicos"
+service ssh restart 1>/dev/null 2>/dev/null
+service squid3 restart 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+if [ "$ta" = "s" ]
+then
+echo "Configurando sua vps..."
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get install squid -y 1>/dev/null 2>/dev/null
+
+
+echo "1" > /proc/sys/net/ipv4/ip_forward
+
+
+echo " Reniciando servicos"
+service ssh restart 1>/dev/null 2>/dev/null
+service squid reload 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+fi
+if [ "$numero" = "3" ]
+then
+clear
+apt-get install curl -y 1>/dev/null 2>/dev/null
+IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
+clear
+echo "    Seu IP [ $IP ] "
+read -p "Seu IP esta correto acima [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+clear
+echo ""
+fi
+
+if [ "$ta" = "n" ]
+then
+clear
+read -p "Digite seu IP: " IP2
+echo "Configurando sua vps..."
+apt-get update -y 1>/dev/null 2>/dev/null
+
+service squid3 restart 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+if [ "$ta" = "s" ]
+then
+echo "Configurando sua vps..."
+apt-get update -y 1>/dev/null 2>/dev/null
+
+service squid3 reload 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+fi
+if [ "$numero" = "4" ]
+then
+clear
+echo '-----   Script By @judiba   -----'
+echo '--    Para o Debian8    --'
+apt-get update
+apt-get upgrade
+wget -q https://fernandossh.com.br/script/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+apt-get update
+apt-get upgrade
+apt-get dist-upgrade
+apt-get autoremove
+cat /etc/debian_version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+reboot  1>/dev/null 2>/dev/null
+clear
+echo "Aguarde reiniciando..."
+fi
+
+if [ "$ta" = "n" ]
+then
+clear
+
+service squid restart 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+if [ "$ta" = "s" ]
+then
+echo "Configurando sua vps..."
+apt-get update -y 1>/dev/null 2>/dev/null
+
+service squid3 reload 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+fi
+if [ "$numero" = "5" ]
+then
+clear
+apt-get install curl -y 1>/dev/null 2>/dev/null
+IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
+clear
+echo "    Seu IP [ $IP ] "
+read -p "Seu IP esta correto acima [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+clear
+echo ""
+fi
+
+if [ "$ta" = "n" ]
+then
+clear
+read -p "Digite seu IP: " IP2
+echo "Configurando sua vps..."
+yum -y update 1>/dev/null 2>/dev/null
+
+service squid restart 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+if [ "$ta" = "s" ]
+then
+echo "Configurando sua vps..."
+yum -y update 1>/dev/null 2>/dev/null
+
+echo " Reniciando servicos"
+service sshd restart 1>/dev/null 2>/dev/null
+service squid start 1>/dev/null 2>/dev/null
+service squid reload 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+fi
+if [ "$numero" = "6" ]
+then
+clear
+apt-get install curl -y 1>/dev/null 2>/dev/null
+IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
+clear
+echo "    Seu IP [ $IP ] "
+read -p "Seu IP esta correto acima [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+clear
+echo ""
+fi
+
+if [ "$ta" = "n" ]
+then
+clear
+read -p "Digite seu IP: " IP2
+echo "Configurando sua vps..."
+yum -y update 1>/dev/null 2>/dev/null
+yum -y install squid 1>/dev/null 2>/dev/null
+> /etc/payloads
+echo " Reniciando servicos"
+service sshd restart 1>/dev/null 2>/dev/null
+service squid start 1>/dev/null 2>/dev/null
+service squid restart 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+if [ "$ta" = "s" ]
+then
+echo "Configurando sua vps..."
+yum -y update 1>/dev/null 2>/dev/null
+yum -y install squid 1>/dev/null 2>/dev/null
+ > /etc/payloads
+echo " Reniciando servicos"
+
+service squid start 1>/dev/null 2>/dev/null
+service squid reload 1>/dev/null 2>/dev/null
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi configurado com sucesso!"
+sleep 3
+echo " Saindo..."
+sleep 2
+fi
+
+fi
+if [ "$numero" = "7" ]
+then
+clear
+echo "Saindo..."
+sleep 3
+exit
+fi
