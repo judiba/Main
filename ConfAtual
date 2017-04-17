@@ -177,7 +177,7 @@ echo '-----   Script By @judiba   -----'
 echo '--    Para o Debian8    --'
 apt-get update
 apt-get upgrade
-wget -q https://fernandossh.com.br/script/debian8 -O /etc/apt/sources.list
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
 echo "Atualizando a VPS..."
 apt-get update
 apt-get upgrade
