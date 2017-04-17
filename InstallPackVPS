@@ -22,11 +22,29 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-echo -e "\033[1;34m              ____            _   __     ______  ____                 \033[0m"
-echo -e "\033[1;34m             |  _ \ __ _  ___| | _\ \   / /  _ \/ ___|                \033[0m" 
-echo -e "\033[1;34m             | |_) / _` |/ __| |/ /\ \ / /| |_) \___ \                \033[0m" 
-echo -e "\033[1;34m             |  __/ (_| | (__|   <  \ V / |  __/ ___) |               \033[0m"
-echo -e "\033[1;34m             |_|   \__,_|\___|_|\_\  \_/  |_|   |____/                \033[0m"
+echo -e "\033[1;30m                           .                                          \033[0m"
+echo -e "\033[1;30m                      .XG@B@@1                                        \033[0m"  
+echo -e "\033[1;30m                      @B@@@B@                                         \033[0m"
+echo -e "\033[1;30m                      B@B@B@M          ,,::i.                         \033[0m"
+echo -e "\033[1;30m                      @B@BOO@qi       iLPSF5X:                        \033[0m"
+echo -e "\033[1;30m                      B@Bri2B@B@:    PB@Bkri7v,                       \033[0m"    
+echo -e "\033[1;30m                      @B@     7@Z   :BN                               \033[0m"
+echo -e "\033[1;30m                      B@B@ii:  :B0  .7 .i77i.P:                       \033[0m"
+echo -e "\033[1;30m                      @B:7GB@M7B@@,    k@B@XrBS                       \033[0m"
+echo -e "\033[1;30m                      B0       @B@r                                   \033[0m"
+echo -e "\033[1;30m                      @L      8B@B:                                   \033[0m" 
+echo -e "\033[1;30m                      XO     @B@B@      ,.                            \033[0m"
+echo -e "\033[1;30m                     :B.j0Pii7G@B  .;   :7FSX.                        \033[0m"
+echo -e "\033[1;30m                      @:LB@:   .@B@@r   .BMB.                         \033[0m"
+echo -e "\033[1;30m                      .@.jiBB@B@@:.@B@B@B:L7                          \033[0m" 
+echo -e "\033[1;30m                        :@v5   .:.   .:.  uX                          \033[0m"
+echo -e "\033[1;30m                         .@2F    :Jij    EL                           \033[0m"
+echo -e "\033[1;30m                           MNL    @@J  ,k.                            \033[0m"
+echo -e "\033[1;30m                            UBv   @BE .U                              \033[0m"
+echo -e "\033[1;30m                             :E7 .B@B .                               \033[0m"
+echo -e "\033[1;30m                               i  @Br                                 \033[0m"
+echo -e "\033[1;30m                                  @                                   \033[0m" 
+echo -e "\033[1;30m                                                                      \033[0m"  
 echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
 
 sleep 5
@@ -151,7 +169,7 @@ clear
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackVPS 1.0" ; tput sgr0
 echo ""
 echo -e OBS:    Digite - PackVPS - para acessar esse PACK
-echo -e "\033[1;37mEscolha uma opção:    Para Sair Ctrl + C\033[1;33m
+echo -e \033[1;37m - Escolha uma opção:    Para Sair Ctrl + C\033[1;33m
 echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[01;34m"
 echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[01;34m"
 echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios SSH)\033[0m"
