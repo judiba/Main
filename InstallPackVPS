@@ -35,15 +35,15 @@ tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "INSTALANDO PAC
 echo -e "\033[1;34m INSTALANDO...\033[1;32m"
 
 apt-get update
+apt-get install bc
 apt-get install nano
-apt-get install wget
 apt-get install htop
 apt-get install dos2unix -y
 apt-get install screenfetch -y
 apt-get install figlet -y
 rm .bashrc
 rm screenfetch-dev
-wget https://fernandossh.com.br/script/.bashrc
+wget https://raw.githubusercontent.com/judiba/Main/master/.bashrc
 wget https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
 clear
 apt-get install python-pip -y
@@ -53,82 +53,98 @@ apt-get install nload -y
 apt-get install unzip -y
 apt-get install sudo -y
 apt-get install sslh -y
+wget http://www.webmin.com/jcameron-key.asc
+apt-key add jcameron-key.asc
+apt-get update
+sleep 10
+apt-get install apt-transport-https -y
+sleep 5
+apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python -y
+sleep 10
+dpkg-reconfigure tzdata
+sleep 10
 apt-get -y --purge remove samba*
 service exim4 stop
 apt-get -y --purge remove exim4*
 apt-get -y --purge remove sendmail*
 apt-get -y --purge remove bind9*
+sleep 10
+apt-get install webmin
+sleep 20
+apt-get install usermin
+sleep 10
+apt-get clean
 service apache2 stop 1> /dev/null 2> /dev/null
 
 iptables -F
 
 
 clear
-wget https://fernandossh.com.br/script/ConfAtual -O /bin/ConfAtual
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfAtual -O /bin/ConfAtual
 chmod +x /bin/ConfAtual
 
-wget https://fernandossh.com.br/script/monitorcpu -O /bin/CpuMonitor
+wget https://raw.githubusercontent.com/judiba/Main/master/monitorcpu -O /bin/CpuMonitor
 chmod +x /bin/CpuMonitor
 
-wget https://fernandossh.com.br/script/LimpadorCache -O /bin/ClearCache
+wget https://raw.githubusercontent.com/judiba/Main/master/LimpadorCache -O /bin/ClearCache
 chmod +x /bin/ClearCache
 
-wget https://fernandossh.com.br/script/usermonitor -O /bin/UserMonitor
+wget https://raw.githubusercontent.com/judiba/Main/master/usermonitor -O /bin/UserMonitor
 chmod +x /bin/UserMonitor
 
-wget https://fernandossh.com.br/script/OpenUdp -O /bin/OpenUDP
+wget https://raw.githubusercontent.com/judiba/Main/master/OpenUdp -O /bin/OpenUDP
 chmod +x /bin/OpenUDP
 
-wget https://fernandossh.com.br/script/TesteConexao -O /bin/SpeedTest
+wget https://raw.githubusercontent.com/judiba/Main/master/TesteConexao -O /bin/SpeedTest
 chmod +x /bin/SpeedTest
 
-wget https://fernandossh.com.br/script/Banner -O /bin/Banner
+wget https://raw.githubusercontent.com/judiba/Main/master/Banner -O /bin/Banner
 chmod +x /bin/Banner
 
-wget https://fernandossh.com.br/script/UserBackup -O /bin/UserBackup
+wget https://raw.githubusercontent.com/judiba/Main/master/UserBackup -O /bin/UserBackup
 chmod +x /bin/UserBackup
 
-wget https://fernandossh.com.br/script/UserCreate -O /bin/UserCreate
+wget https://raw.githubusercontent.com/judiba/Main/master/UserCreate -O /bin/UserCreate
 chmod +x /bin/UserCreate
 
-wget https://fernandossh.com.br/script/UserClear -O /bin/UserClear
+wget https://raw.githubusercontent.com/judiba/Main/master/script/UserClear -O /bin/UserClear
 chmod +x /bin/UserClear
 
-wget https://fernandossh.com.br/script/LimiterSSH -O /bin/LimiterSSH
+wget https://raw.githubusercontent.com/judiba/Main/master/LimiterSSH -O /bin/LimiterSSH
 chmod +x /bin/LimiterSSH
 
-wget https://raw.githubusercontent.com/JorisBRA/jorisBra/master/MonitorTotal -O /bin/MonitorTotal.sh
+wget https://raw.githubusercontent.com/judiba/Main/master/MonitorTotal.sh -O /bin/MonitorTotal.sh
 chmod +x /bin/MonitorTotal.sh
 
-wget https://fernandossh.com.br/script/MudarLimite -O /bin/MudarLimite
+wget https://raw.githubusercontent.com/judiba/Main/master/MudarLimite -O /bin/MudarLimite
 chmod +x /bin/MudarLimite
 
-wget https://fernandossh.com.br/script/MudarSenha -O /bin/MudarSenha
+wget https://raw.githubusercontent.com/judiba/Main/master/MudarSenha -O /bin/MudarSenha
 chmod +x /bin/MudarSenha
 
-wget https://fernandossh.com.br/script/ConfVps -O /bin/ConfVPS
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVps -O /bin/ConfVPS
 chmod +x /bin/ConfVPS
 
-wget https://fernandossh.com.br/script/MudarValidade -O /bin/MudarValidade
+wget https://raw.githubusercontent.com/judiba/Main/master/MudarValidade -O /bin/MudarValidade
 chmod +x /bin/MudarValidade
 
-wget https://fernandossh.com.br/script/VNC -O /bin/VNC
+wget https://raw.githubusercontent.com/judiba/Main/master/VNC -O /bin/VNC
 chmod +x /bin/VNC
 
-wget https://fernandossh.com.br/script/UserDel -O /bin/UserDel
+wget https://raw.githubusercontent.com/judiba/Main/master/UserDel -O /bin/UserDel
 chmod +x /bin/UserDel
 
-wget https://fernandossh.com.br/script/KernelControl -O /bin/KernelControl
+wget https://raw.githubusercontent.com/judiba/Main/master/KernelControl -O /bin/KernelControl
 chmod +x /bin/KernelControl
 
-wget https://fernandossh.com.br/script/DadosMonitor -O /bin/DadosMonitor
+wget https://raw.githubusercontent.com/judiba/Main/master/DadosMonitor -O /bin/DadosMonitor
 chmod +x /bin/DadosMonitor
 
-wget https://fernandossh.com.br/script/OpenVPN -O /bin/OpenVPN
+wget https://raw.githubusercontent.com/judiba/Main/master/OpenVPN -O /bin/OpenVPN
 chmod +x /bin/OpenVPN
  
-wget https://fernandossh.com.br/script/PackSSH -O /bin/PackSSH
-chmod +x /bin/PackSSH
+wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS -O /bin/PackVPS
+chmod +x /bin/PackVPS
 
 clear
 
