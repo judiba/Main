@@ -23,7 +23,7 @@ tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackVPS 1.0" ;
 echo ""
 echo ""
 echo -e OBS:    Digite - PackVPS - para acessar esse PACK
-echo -e Escolha uma opção:    Para Sair Ctrl + C
+echo -e Escolha uma opcao:    Para Sair Ctrl + C
 echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[01;34m"
 echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[01;34m"
 echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios SSH)\033[0m"
@@ -52,7 +52,7 @@ echo -e "[24]\033[01;36m•====> Dropbear (Ativa o Dropbear SSH para NETFLIX)\03
 echo -e "[25]\033[01;36m•====> Desinstalar (Remove o PackVPS por completo)\033[0m"
 echo""
 echo""
-read -p " Selecione a opção [00-25]: " opcao
+read -p " Selecione a opcao [00-25]: " opcao
 
 case $opcao in
  00)
