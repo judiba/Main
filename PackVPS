@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sed -i -e 's/\r$//' /bin/PackVPS
 corPadrao="\033[0m"
 preto="\033[0;30m"
 vermelho="\033[0;31m"
