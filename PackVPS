@@ -18,14 +18,13 @@ purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
-
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackVPS 1.0" ; tput sgr0
 echo ""
 echo -e OBS:    Digite - PackVPS - para acessar esse PACK
-echo -e "\033[1;37mEscolha uma opção:    Para Sair Ctrl + C\033[1;33m
-echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[01;34m"
-echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[01;34m"
-echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios SSH)\033[0m"
+echo -e Escolha uma opaco:    Para Sair Ctrl + C
+echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[0m"
+echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[0m"
+echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios Teste e SSH)\033[0m"
 echo -e "[03]\033[01;36m•====> UserBackup (Gerencia Backup dos Usuarios SSH)\033[0m"
 echo -e "[04]\033[01;36m•====> CpuMonitor (Monitora o Uso da CPU, RAM e UPTIME)\033[0m"
 echo -e "[05]\033[01;36m•====> UserMonitor (Monitora os Usuarios Conectados)\033[0m"
@@ -48,10 +47,11 @@ echo -e "[21]\033[01;36m•====> SSHMonitor (Monitor Total de Usuarios Conectado
 echo -e "[22]\033[01;36m•====> Security (Ativa e Desativa o Firewall e Torrent)\033[0m"
 echo -e "[23]\033[01;36m•====> Netflix (Ativa o Hulu e DNS para NETFLIX)\033[0m"
 echo -e "[24]\033[01;36m•====> Dropbear (Ativa o Dropbear SSH para NETFLIX)\033[0m"
-echo -e "[25]\033[01;36m•====> Desinstalar (Remove o PackVPS por completo)\033[0m"
+echo -e "[25]\033[01;36m•====> TCPTweaker (Melhora a velocidade e desempenho da VPS)\033[0m"
+echo -e "[26]\033[01;36m•====> Desinstalar (Remove o PackVPS por completo)\033[0m"
 echo""
 echo""
-read -p " Selecione a opção [00-23]: " opcao
+read -p " Selecione a opcao [00-26]: " opcao
 
 case $opcao in
  00)
@@ -145,6 +145,10 @@ case $opcao in
   sleep 3
   PackVPS;;
  25)
+  tcptweaker.sh
+  sleep 3
+  PackVPS;; 
+ 26)
   rm -rf /bin/Banner 2>/dev/null
   rm -rf /bin/ClearCache 2>/dev/null
   rm -rf /bin/ConfVPS 2>/dev/null
@@ -162,7 +166,9 @@ case $opcao in
   rm -rf /bin/UserCreate 2>/dev/null
   rm -rf /bin/UserDel 2>/dev/null
   rm -rf /bin/UserMonitor 2>/dev/null
+  rm -rf /bin/MonitorTotal.sh 2>/dev/null
   rm -rf /bin/VNC 2>/dev/null
+  rm -rf /bin/tcptweaker.sh 2>/dev/null
   rm -rf /bin/addhost 2>/dev/null
   rm -rf /bin/ajuda 2>/dev/null
   rm -rf /bin/alterarlimite 2>/dev/null
