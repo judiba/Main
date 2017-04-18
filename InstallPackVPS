@@ -60,8 +60,10 @@ apt-get install htop
 apt-get install dos2unix -y
 apt-get install screenfetch -y
 apt-get install figlet -y
-rm .bashrc
-wget https://raw.githubusercontent.com/judiba/Main/master/.bashrc
+echo "
+screenfetch
+figlet R3V1V3R VPS
+PackVPS " >> .bashrc
 clear
 apt-get install python-pip -y
 pip install speedtest-cli -y
@@ -166,8 +168,8 @@ tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackVPS 1.0" ;
 echo ""
 echo -e OBS:    Digite - PackVPS - para acessar esse PACK
 echo -e Escolha uma opaco:    Para Sair Ctrl + C
-echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[01;34m"
-echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[01;34m"
+echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[0m"
+echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[0m"
 echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios Teste e SSH)\033[0m"
 echo -e "[03]\033[01;36m•====> UserBackup (Gerencia Backup dos Usuarios SSH)\033[0m"
 echo -e "[04]\033[01;36m•====> CpuMonitor (Monitora o Uso da CPU, RAM e UPTIME)\033[0m"
