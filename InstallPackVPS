@@ -158,6 +158,8 @@ chmod +x /bin/tcptweaker.sh
 wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS -O /bin/PackVPS
 chmod +x /bin/PackVPS
 
+sed -i -e 's/\r$//' /bin/PackVPS
+
 clear
 
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackVPS 1.0" ; tput sgr0
