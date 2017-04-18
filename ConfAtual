@@ -9,66 +9,54 @@ echo "        Nome: PackVPS 1.0"
 echo " "
 read -p "De enter para continuar..."
 clear
-echo "        Escolha o sistema da sua vps"
+echo "Escolha o sistema da sua VPS"
 echo " "
 
-echo "
-1] Ubuntu 14
-2] Ubuntu 16
-3] Debian 7
-4] Debian 8
-5] CentOS
-6] Fedora
-7] sair"
+echo -e "\033[1;34m
+[1] Ubuntu 14
+[2] Ubuntu 16
+[3] Debian 7
+[4] Debian 8
+[5] CentOS
+[6] Fedora
+[7] sair \033[0m"
 echo " "
 read -p "Escolha o numero da sua opção: " numero
 
 if [ "$numero" = "1" ]
 then
 clear
-apt-get install curl -y 1>/dev/null 2>/dev/null
-IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
-clear
-echo "    Seu IP [ $IP ] "
-read -p "Seu IP esta correto acima [ s/n ]: " ta
+echo '-----   Script By @judiba   -----'
+echo '----     Para o Ubuntu 14    ----'
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
+cat /etc/debian_version
+echo "O número acima mostra a versão atual do Ubuntu. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
 then
+shutdown -r 5 1>/dev/null 2>/dev/null
 clear
-echo ""
+echo "Aguarde reiniciando..."
 fi
 
 if [ "$ta" = "n" ]
 then
 clear
-read -p "Digite seu IP: " IP2
-echo "Configurando sua vps..."
-apt-get update -y 1>/dev/null 2>/dev/null
-
 echo " Sucesso... "
 sleep 3
-echo " Seu servidor foi configurado com sucesso!"
+echo " Seu servidor foi Atualizado com sucesso!"
 sleep 3
 echo " Saindo..."
 sleep 2
-fi
-
-if [ "$ta" = "s" ]
-then
-echo "Configurando sua vps..."
-apt-get update -y 1>/dev/null 2>/dev/null
-
-
-
-echo " Reniciando servicos"
-service ssh restart 1>/dev/null 2>/dev/null
-service squid3 reload 1>/dev/null 2>/dev/null
-echo " Sucesso... "
-sleep 3
-echo " Seu servidor foi configurado com sucesso!"
-sleep 3
-echo " Saindo..."
-sleep 2
-fi
+PackVPS
 
 fi
 if [ "$numero" = "2" ]
@@ -103,28 +91,6 @@ echo " Saindo..."
 sleep 2
 fi
 
-if [ "$ta" = "s" ]
-then
-echo "Configurando sua vps..."
-apt-get update -y 1>/dev/null 2>/dev/null
-apt-get install squid -y 1>/dev/null 2>/dev/null
-
-
-echo "1" > /proc/sys/net/ipv4/ip_forward
-
-
-echo " Reniciando servicos"
-service ssh restart 1>/dev/null 2>/dev/null
-service squid reload 1>/dev/null 2>/dev/null
-echo " Sucesso... "
-sleep 3
-echo " Seu servidor foi configurado com sucesso!"
-sleep 3
-echo " Saindo..."
-sleep 2
-fi
-
-fi
 if [ "$numero" = "3" ]
 then
 clear
@@ -141,32 +107,39 @@ fi
 
 if [ "$ta" = "n" ]
 then
+then
 clear
-read -p "Digite seu IP: " IP2
-echo "Configurando sua vps..."
+echo '-----   Script By @judiba   -----'
+echo '--    Para o Debian8    --'
 apt-get update -y 1>/dev/null 2>/dev/null
-
-service squid3 restart 1>/dev/null 2>/dev/null
-echo " Sucesso... "
-sleep 3
-echo " Seu servidor foi configurado com sucesso!"
-sleep 3
-echo " Saindo..."
-sleep 2
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
+cat /etc/debian_version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+shutdown -r 5 1>/dev/null 2>/dev/null
+clear
+echo "Aguarde reiniciando..."
 fi
 
-if [ "$ta" = "s" ]
+if [ "$ta" = "n" ]
 then
-echo "Configurando sua vps..."
-apt-get update -y 1>/dev/null 2>/dev/null
-
-service squid3 reload 1>/dev/null 2>/dev/null
+clear
 echo " Sucesso... "
 sleep 3
-echo " Seu servidor foi configurado com sucesso!"
+echo " Seu servidor foi Atualizado com sucesso!"
 sleep 3
 echo " Saindo..."
 sleep 2
+PackVPS
 fi
 
 fi
@@ -224,98 +197,74 @@ fi
 if [ "$numero" = "5" ]
 then
 clear
-apt-get install curl -y 1>/dev/null 2>/dev/null
-IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
-clear
-echo "    Seu IP [ $IP ] "
-read -p "Seu IP esta correto acima [ s/n ]: " ta
+echo '-----   Script By @judiba   -----'
+echo '--    Para o Debian8    --'
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
+cat /etc/debian_version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
 then
+shutdown -r 5 1>/dev/null 2>/dev/null
 clear
-echo ""
+echo "Aguarde reiniciando..."
 fi
 
 if [ "$ta" = "n" ]
 then
 clear
-read -p "Digite seu IP: " IP2
-echo "Configurando sua vps..."
-yum -y update 1>/dev/null 2>/dev/null
-
-service squid restart 1>/dev/null 2>/dev/null
 echo " Sucesso... "
 sleep 3
-echo " Seu servidor foi configurado com sucesso!"
+echo " Seu servidor foi Atualizado com sucesso!"
 sleep 3
 echo " Saindo..."
 sleep 2
-fi
-
-if [ "$ta" = "s" ]
-then
-echo "Configurando sua vps..."
-yum -y update 1>/dev/null 2>/dev/null
-
-echo " Reniciando servicos"
-service sshd restart 1>/dev/null 2>/dev/null
-service squid start 1>/dev/null 2>/dev/null
-service squid reload 1>/dev/null 2>/dev/null
-echo " Sucesso... "
-sleep 3
-echo " Seu servidor foi configurado com sucesso!"
-sleep 3
-echo " Saindo..."
-sleep 2
+PackVPS
 fi
 
 fi
 if [ "$numero" = "6" ]
 then
 clear
-apt-get install curl -y 1>/dev/null 2>/dev/null
-IP=$(curl https://api.ipify.org/) 1>/dev/null 2>/dev/null
-clear
-echo "    Seu IP [ $IP ] "
-read -p "Seu IP esta correto acima [ s/n ]: " ta
+echo '-----   Script By @judiba   -----'
+echo '--    Para o Debian8    --'
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
+cat /etc/debian_version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
 then
+shutdown -r 5 1>/dev/null 2>/dev/null
 clear
-echo ""
+echo "Aguarde reiniciando..."
 fi
 
 if [ "$ta" = "n" ]
 then
 clear
-read -p "Digite seu IP: " IP2
-echo "Configurando sua vps..."
-yum -y update 1>/dev/null 2>/dev/null
-
-echo " Reniciando servicos"
-service squid restart 1>/dev/null 2>/dev/null
 echo " Sucesso... "
 sleep 3
-echo " Seu servidor foi configurado com sucesso!"
+echo " Seu servidor foi Atualizado com sucesso!"
 sleep 3
 echo " Saindo..."
 sleep 2
-fi
-
-if [ "$ta" = "s" ]
-then
-echo "Configurando sua vps..."
-yum -y update 1>/dev/null 2>/dev/null
-yum -y install squid 1>/dev/null 2>/dev/null
- > /etc/payloads
-echo " Reniciando servicos"
-
-service squid start 1>/dev/null 2>/dev/null
-service squid reload 1>/dev/null 2>/dev/null
-echo " Sucesso... "
-sleep 3
-echo " Seu servidor foi configurado com sucesso!"
-sleep 3
-echo " Saindo..."
-sleep 2
+PackVPS
 fi
 
 fi
