@@ -49,9 +49,8 @@ echo -e "\033[1;30m-------------------------------------------------------------
 
 sleep 5
 
-tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "INSTALANDO PACKVPS 1.0" ; tput sgr0
-echo ""
-echo ""
+tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PACKVPS 1.0" ; tput sgr0
+
 echo -e "\033[1;34m INSTALANDO...\033[1;32m"
 
 apt-get update -y 1>/dev/null 2>/dev/null
