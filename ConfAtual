@@ -189,7 +189,7 @@ echo "O número acima mostra a versão atual do Debian. É altamente recomendáv
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
 then
-reboot  1>/dev/null 2>/dev/null
+shutdown -r 5 1>/dev/null 2>/dev/null
 clear
 echo "Aguarde reiniciando..."
 fi
@@ -197,15 +197,12 @@ fi
 if [ "$ta" = "n" ]
 then
 clear
-
-service squid restart 1>/dev/null 2>/dev/null
 echo " Sucesso... "
 sleep 3
 echo " Seu servidor foi Atualizado com sucesso!"
 sleep 3
 echo " Saindo..."
 sleep 2
-;;
 PackVPS
 fi
 
