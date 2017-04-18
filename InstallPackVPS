@@ -88,7 +88,7 @@ apt-get -y --purge remove bind9*
 apt-get install webmin
 apt-get install usermin
 apt-get autoremove
-service apache2 stop 1>/dev/null 2>/dev/null
+service apache2 stop
 
 iptables -F
 
@@ -195,8 +195,7 @@ echo -e "[23]\033[01;36m•====> Netflix (Ativa o Hulu e DNS para NETFLIX)\033[0
 echo -e "[24]\033[01;36m•====> Dropbear (Ativa o Dropbear SSH para NETFLIX)\033[0m"
 echo -e "[25]\033[01;36m•====> TCPTweaker (Melhora a velocidade e desempenho da VPS)\033[0m"
 echo -e "[26]\033[01;36m•====> Desinstalar (Remove o PackVPS por completo)\033[0m"
-echo""
-echo""
+
 read -p " Selecione a opcao [00-26]: " opcao
 
 case $opcao in
