@@ -84,7 +84,7 @@ apt-get -y --purge remove exim4*
 apt-get -y --purge remove samba*
 apt-get -y --purge remove sendmail*
 apt-get -y --purge remove bind9*
-apt-get autoremove
+apt-get autoclear -y 1>/dev/null 2>/dev/null
 
 iptables -F
 
@@ -328,5 +328,9 @@ case $opcao in
   rm -rf /bin/sshlimiter 2>/dev/null
   rm -rf /bin/sshmonitor 2>/dev/null
   rm -rf /bin/vpspack 2>/dev/null
-  rm -rf /bin/PackVPS 2>/dev/null;;  
+  rm -rf /bin/PackVPS 2>/dev/null
+  rm -r ~/InstallPackVPS
+  rm -r ~/jcameron-key.asc
+  sed '/PackVPS/d' .bashrc
+  clear;;  
 esac
