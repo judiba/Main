@@ -107,7 +107,6 @@ fi
 
 if [ "$ta" = "n" ]
 then
-then
 clear
 echo '-----   Script By @judiba   -----'
 echo '--    Para o Debian8    --'
