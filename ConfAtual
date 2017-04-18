@@ -183,6 +183,7 @@ apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
 apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /etc/debian_version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
