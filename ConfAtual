@@ -200,10 +200,12 @@ clear
 service squid restart 1>/dev/null 2>/dev/null
 echo " Sucesso... "
 sleep 3
-echo " Seu servidor foi configurado com sucesso!"
+echo " Seu servidor foi Atualizado com sucesso!"
 sleep 3
 echo " Saindo..."
 sleep 2
+;;
+PackVPS
 fi
 
 if [ "$ta" = "s" ]
@@ -289,11 +291,8 @@ clear
 read -p "Digite seu IP: " IP2
 echo "Configurando sua vps..."
 yum -y update 1>/dev/null 2>/dev/null
-yum -y install squid 1>/dev/null 2>/dev/null
-> /etc/payloads
+
 echo " Reniciando servicos"
-service sshd restart 1>/dev/null 2>/dev/null
-service squid start 1>/dev/null 2>/dev/null
 service squid restart 1>/dev/null 2>/dev/null
 echo " Sucesso... "
 sleep 3
