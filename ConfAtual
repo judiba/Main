@@ -175,14 +175,14 @@ then
 clear
 echo '-----   Script By @judiba   -----'
 echo '--    Para o Debian8    --'
-apt-get update
-apt-get upgrade
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
 wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
 echo "Atualizando a VPS..."
-apt-get update
-apt-get upgrade
-apt-get dist-upgrade
-apt-get autoremove
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
 cat /etc/debian_version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
