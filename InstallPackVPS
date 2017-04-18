@@ -22,29 +22,29 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
-echo -e "\033[1;30m                           .                                          \033[0m"
-echo -e "\033[1;30m                      .XG@B@@1                                        \033[0m"  
-echo -e "\033[1;30m                      @B@@@B@                                         \033[0m"
-echo -e "\033[1;30m                      B@B@B@M          ,,::i.                         \033[0m"
-echo -e "\033[1;30m                      @B@BOO@qi       iLPSF5X:                        \033[0m"
-echo -e "\033[1;30m                      B@Bri2B@B@:    PB@Bkri7v,                       \033[0m"    
-echo -e "\033[1;30m                      @B@     7@Z   :BN                               \033[0m"
-echo -e "\033[1;30m                      B@B@ii:  :B0  .7 .i77i.P:                       \033[0m"
-echo -e "\033[1;30m                      @B:7GB@M7B@@,    k@B@XrBS                       \033[0m"
-echo -e "\033[1;30m                      B0       @B@r                                   \033[0m"
-echo -e "\033[1;30m                      @L      8B@B:                                   \033[0m" 
-echo -e "\033[1;30m                      XO     @B@B@      ,.                            \033[0m"
-echo -e "\033[1;30m                     :B.j0Pii7G@B  .;   :7FSX.                        \033[0m"
-echo -e "\033[1;30m                      @:LB@:   .@B@@r   .BMB.                         \033[0m"
-echo -e "\033[1;30m                      .@.jiBB@B@@:.@B@B@B:L7                          \033[0m" 
-echo -e "\033[1;30m                        :@v5   .:.   .:.  uX                          \033[0m"
-echo -e "\033[1;30m                         .@2F    :Jij    EL                           \033[0m"
-echo -e "\033[1;30m                           MNL    @@J  ,k.                            \033[0m"
-echo -e "\033[1;30m                            UBv   @BE .U                              \033[0m"
-echo -e "\033[1;30m                             :E7 .B@B .                               \033[0m"
-echo -e "\033[1;30m                               i  @Br                                 \033[0m"
-echo -e "\033[1;30m                                  @                                   \033[0m" 
-echo -e "\033[1;30m                                                                      \033[0m"  
+echo -e "\033[1;37m                           .                                          \033[0m"
+echo -e "\033[1;37m                      .XG@B@@1                                        \033[0m"  
+echo -e "\033[1;37m                      @B@@@B@                                         \033[0m"
+echo -e "\033[1;37m                      B@B@B@M          ,,::i.                         \033[0m"
+echo -e "\033[1;37m                      @B@BOO@qi       iLPSF5X:                        \033[0m"
+echo -e "\033[1;37m                      B@Bri2B@B@:    PB@Bkri7v,                       \033[0m"    
+echo -e "\033[1;37m                      @B@     7@Z   :BN                               \033[0m"
+echo -e "\033[1;37m                      B@B@ii:  :B0  .7 .i77i.P:                       \033[0m"
+echo -e "\033[1;37m                      @B:7GB@M7B@@,    k@B@XrBS                       \033[0m"
+echo -e "\033[1;37m                      B0       @B@r                                   \033[0m"
+echo -e "\033[1;37m                      @L      8B@B:                                   \033[0m" 
+echo -e "\033[1;37m                      XO     @B@B@      ,.                            \033[0m"
+echo -e "\033[1;37m                      :B.j0Pii7G@B  .;   :7FSX.                       \033[0m"
+echo -e "\033[1;37m                       @:LB@:   .@B@@r   .BMB.                        \033[0m"
+echo -e "\033[1;37m                       .@.jiBB@B@@:.@B@B@B:L7                         \033[0m" 
+echo -e "\033[1;37m                        :@v5   .:.   .:.  uX                          \033[0m"
+echo -e "\033[1;37m                         .@2F    :Jij    EL                           \033[0m"
+echo -e "\033[1;37m                           MNL    @@J  ,k.                            \033[0m"
+echo -e "\033[1;37m                            UBv   @BE .U                              \033[0m"
+echo -e "\033[1;37m                             :E7 .B@B .                               \033[0m"
+echo -e "\033[1;37m                               i  @Br                                 \033[0m"
+echo -e "\033[1;37m                                  @                                   \033[0m" 
+echo -e "\033[1;37m                                                                      \033[0m"  
 echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
 
 sleep 5
@@ -54,7 +54,7 @@ echo ""
 echo ""
 echo -e "\033[1;34m INSTALANDO...\033[1;32m"
 
-apt-get update
+apt-get update -y 1>/dev/null 2>/dev/null
 apt-get install bc
 apt-get install nano
 apt-get install htop
@@ -62,9 +62,7 @@ apt-get install dos2unix -y
 apt-get install screenfetch -y
 apt-get install figlet -y
 rm .bashrc
-rm screenfetch-dev
 wget https://raw.githubusercontent.com/judiba/Main/master/.bashrc
-wget https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
 clear
 apt-get install python-pip -y
 pip install speedtest-cli -y
@@ -75,29 +73,21 @@ apt-get install sudo -y
 apt-get install sslh -y
 wget http://www.webmin.com/jcameron-key.asc
 apt-key add jcameron-key.asc
-apt-get update
-sleep 10
+apt-get update -y 1>/dev/null 2>/dev/null
 apt-get install apt-transport-https -y
-sleep 5
 apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python -y
-sleep 10
 dpkg-reconfigure tzdata
-sleep 10
 apt-get -y --purge remove samba*
 service exim4 stop
 apt-get -y --purge remove exim4*
 apt-get -y --purge remove sendmail*
 apt-get -y --purge remove bind9*
-sleep 10
 apt-get install webmin
-sleep 20
 apt-get install usermin
-sleep 10
-apt-get clean
+apt-get autoremove
 service apache2 stop 1> /dev/null 2> /dev/null
 
 iptables -F
-
 
 clear
 wget https://raw.githubusercontent.com/judiba/Main/master/ConfAtual -O /bin/ConfAtual
@@ -162,7 +152,10 @@ chmod +x /bin/DadosMonitor
 
 wget https://raw.githubusercontent.com/judiba/Main/master/OpenVPN -O /bin/OpenVPN
 chmod +x /bin/OpenVPN
- 
+
+wget https://raw.githubusercontent.com/judiba/Main/master/tcptweaker.sh -O /bin/tcptweaker.sh
+chmod +x /bin/tcptweaker.sh
+
 wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS -O /bin/PackVPS
 chmod +x /bin/PackVPS
 
@@ -174,7 +167,7 @@ echo -e OBS:    Digite - PackVPS - para acessar esse PACK
 echo -e Escolha uma opaco:    Para Sair Ctrl + C
 echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[01;34m"
 echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[01;34m"
-echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios SSH)\033[0m"
+echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios Teste e SSH)\033[0m"
 echo -e "[03]\033[01;36m•====> UserBackup (Gerencia Backup dos Usuarios SSH)\033[0m"
 echo -e "[04]\033[01;36m•====> CpuMonitor (Monitora o Uso da CPU, RAM e UPTIME)\033[0m"
 echo -e "[05]\033[01;36m•====> UserMonitor (Monitora os Usuarios Conectados)\033[0m"
@@ -197,10 +190,11 @@ echo -e "[21]\033[01;36m•====> SSHMonitor (Monitor Total de Usuarios Conectado
 echo -e "[22]\033[01;36m•====> Security (Ativa e Desativa o Firewall e Torrent)\033[0m"
 echo -e "[23]\033[01;36m•====> Netflix (Ativa o Hulu e DNS para NETFLIX)\033[0m"
 echo -e "[24]\033[01;36m•====> Dropbear (Ativa o Dropbear SSH para NETFLIX)\033[0m"
-echo -e "[25]\033[01;36m•====> Desinstalar (Remove o PackVPS por completo)\033[0m"
+echo -e "[25]\033[01;36m•====> TCPTweaker (Melhora a velocidade e desempenho da VPS)\033[0m"
+echo -e "[26]\033[01;36m•====> Desinstalar (Remove o PackVPS por completo)\033[0m"
 echo""
 echo""
-read -p " Selecione a opcao [00-25]: " opcao
+read -p " Selecione a opcao [00-26]: " opcao
 
 case $opcao in
  00)
@@ -294,6 +288,10 @@ case $opcao in
   sleep 3
   PackVPS;;
  25)
+  tcptweaker.sh
+  sleep 3
+  PackVPS;; 
+ 26)
   rm -rf /bin/Banner 2>/dev/null
   rm -rf /bin/ClearCache 2>/dev/null
   rm -rf /bin/ConfVPS 2>/dev/null
@@ -311,7 +309,9 @@ case $opcao in
   rm -rf /bin/UserCreate 2>/dev/null
   rm -rf /bin/UserDel 2>/dev/null
   rm -rf /bin/UserMonitor 2>/dev/null
+  rm -rf /bin/MonitorTotal.sh 2>/dev/null
   rm -rf /bin/VNC 2>/dev/null
+  rm -rf /bin/tcptweaker.sh 2>/dev/null
   rm -rf /bin/addhost 2>/dev/null
   rm -rf /bin/ajuda 2>/dev/null
   rm -rf /bin/alterarlimite 2>/dev/null
