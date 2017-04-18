@@ -55,7 +55,6 @@ echo ""
 echo -e "\033[1;34m INSTALANDO...\033[1;32m"
 
 apt-get update -y 1>/dev/null 2>/dev/null
-apt-get install bc
 apt-get install nano
 apt-get install htop
 apt-get install dos2unix -y
@@ -71,15 +70,17 @@ apt-get install nload -y
 apt-get install unzip -y
 apt-get install sudo -y
 apt-get install sslh -y
+clear
 wget http://www.webmin.com/jcameron-key.asc
 apt-key add jcameron-key.asc
 apt-get update -y 1>/dev/null 2>/dev/null
+clear
 apt-get install apt-transport-https -y
 apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python -y
 dpkg-reconfigure tzdata
-apt-get -y --purge remove samba*
 service exim4 stop
 apt-get -y --purge remove exim4*
+apt-get -y --purge remove samba*
 apt-get -y --purge remove sendmail*
 apt-get -y --purge remove bind9*
 apt-get install webmin
