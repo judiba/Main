@@ -86,7 +86,7 @@ apt-get -y --purge remove bind9*
 apt-get install webmin
 apt-get install usermin
 apt-get autoremove
-service apache2 stop 1> /dev/null 2> /dev/null
+service apache2 stop 1>/dev/null 2>/dev/null
 
 iptables -F
 
