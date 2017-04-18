@@ -56,7 +56,6 @@ echo -e "\033[1;34m INSTALANDO...\033[1;32m"
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get install nano
 apt-get install htop
-apt-get install dos2unix -y
 apt-get install screenfetch -y
 apt-get install figlet -y
 echo "
