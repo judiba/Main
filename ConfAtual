@@ -1,13 +1,15 @@
 #!/bin/bash
+echo ""
 VERSION=`lsb_release -sd | cut -c 8-`
 echo Versao do seu sistema operacional: ${VERSION}
+echo ""
 echo "Configuração de Atualização"
 echo ""
 echo "        BY: @judiba"
 echo "        R3V1V3R VPS"
 echo "        Data de criação: 15/04/2017"
 echo "        Nome: PackVPS 1.0"
-echo " "
+echo ""
 read -p "De enter para continuar..."
 clear
 echo "Escolha o sistema da sua VPS"
@@ -25,10 +27,12 @@ if [ "$numero" = "1" ]
 then
 clear
 echo '-----Script By @judiba-----'
-echo '------Para o Debian8------'
+echo '------Para o Ubunutu 14-----'
+apt-get install update-manager-core
 apt-get update -y 1>/dev/null 2>/dev/null
-apt-get upgrade -y 1>/dev/null 2>/dev/null
+do-release-upgrade -d -y 1>/dev/null 2>/dev/null
 wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+cat /etc/debian_version
 echo "Atualizando a VPS..."
 echo "Aguarde... "
 sleep 3
@@ -37,8 +41,8 @@ apt-get upgrade -y 1>/dev/null 2>/dev/null
 apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
 apt-get autoremove -y 1>/dev/null 2>/dev/null
 apt-get autoclean -y 1>/dev/null 2>/dev/null
-cat /proc/version
-echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+cat /etc/debian_version
+echo "O número acima mostra a versão atual do Ubuntu. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
 then
@@ -65,6 +69,7 @@ then
 clear
 echo '-----Script By @judiba-----'
 echo '------Para o Debian8------'
+cat /etc/debian_version
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
@@ -76,7 +81,7 @@ apt-get upgrade -y 1>/dev/null 2>/dev/null
 apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
 apt-get autoremove -y 1>/dev/null 2>/dev/null
 apt-get autoclean -y 1>/dev/null 2>/dev/null
-cat /proc/version
+cat /etc/debian_version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
