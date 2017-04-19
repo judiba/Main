@@ -3,7 +3,6 @@ chk=$(cat /etc/ssh/sshd_config |grep Banner )
 if echo "$chk" |grep -v "#Banner" |grep Banner > /dev/null 2> /dev/null
 then
 local=$(echo "$chk" |grep -v "#Banner" |grep Banner |awk '{print $2}')
-mkdir /etc/r3v1v3r/bannervps
 echo "De um nome ao Servidor"
 read -p ": " nome
 echo "Bem Vindo(a) ao Servidor $nome" > $local
