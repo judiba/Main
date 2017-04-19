@@ -40,7 +40,7 @@ apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /etc/debian_version
 echo "O número acima mostra a versão atual do Ubuntu. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
- if [ "$ta" = "s" ]
+if [ "$ta" = "s" ]
 then
 shutdown -r 5 1>/dev/null 2>/dev/null
 clear
@@ -57,6 +57,7 @@ sleep 3
 echo " Saindo..."
 sleep 2
 PackVPS
+fi
 
 fi
 if [ "$numero" = "2" ]
@@ -145,12 +146,14 @@ fi
 if [ "$numero" = "4" ]
 then
 clear
-echo '-----   Script By @judiba   -----'
-echo '--    Para o Debian8    --'
+echo '-----Script By @judiba-----'
+echo '------Para o Debian8------'
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
 echo "Atualizando a VPS..."
+echo "Aguarde... "
+sleep 3
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
@@ -171,7 +174,7 @@ then
 clear
 echo " Sucesso... "
 sleep 3
-echo " Seu servidor foi Atualizado com sucesso!"
+echo " Seu servidor foi Atualizado com sucesso! Lembre-se de reiniciar assim que possivel"
 sleep 3
 echo " Saindo..."
 sleep 2
