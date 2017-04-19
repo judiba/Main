@@ -22,6 +22,21 @@ echo ""
 read -p "Escolha o numero da sua opção: " numero
 
 if [ "$numero" = "1" ]
+then
+clear
+echo '-----Script By @judiba-----'
+echo '------Para o Debian8------'
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+echo "Aguarde... "
+sleep 3
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /proc/version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
@@ -44,8 +59,23 @@ sleep 2
 PackVPS
 fi
 
-
+fi
 if [ "$numero" = "2" ]
+then
+clear
+echo '-----Script By @judiba-----'
+echo '------Para o Debian8------'
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+echo "Aguarde... "
+sleep 3
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /proc/version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
@@ -68,7 +98,23 @@ sleep 2
 PackVPS
 fi
 
+fi
 if [ "$numero" = "3" ]
+then
+clear
+echo '-----Script By @judiba-----'
+echo '------Para o Debian8------'
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+echo "Aguarde... "
+sleep 3
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /proc/version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
@@ -91,6 +137,7 @@ sleep 2
 PackVPS
 fi
 
+fi
 if [ "$numero" = "4" ]
 then
 clear
@@ -131,6 +178,21 @@ fi
 
 fi
 if [ "$numero" = "5" ]
+then
+clear
+echo '-----Script By @judiba-----'
+echo '------Para o Debian8------'
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
+echo "Atualizando a VPS..."
+echo "Aguarde... "
+sleep 3
+apt-get update -y 1>/dev/null 2>/dev/null
+apt-get upgrade -y 1>/dev/null 2>/dev/null
+apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
+apt-get autoremove -y 1>/dev/null 2>/dev/null
+apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /proc/version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
@@ -153,6 +215,7 @@ sleep 2
 PackVPS
 fi
 
+fi
 if [ "$numero" = "6" ]
 then
 clear
