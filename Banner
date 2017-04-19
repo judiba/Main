@@ -3,7 +3,7 @@ chk=$(cat /etc/ssh/sshd_config |grep Banner )
 if echo "$chk" |grep -v "#Banner" |grep Banner > /dev/null 2> /dev/null
 then
 local=$(echo "$chk" |grep -v "#Banner" |grep Banner |awk '{print $2}')
-touch /etc/r3v1v3r/bannervps
+mkdir /etc/r3v1v3r/bannervps
 echo "De um nome ao Servidor"
 read -p ": " nome
 echo "Bem Vindo(a) ao Servidor $nome" > $local
@@ -34,10 +34,11 @@ then
 banner=$(cat /etc/r3v1v3r/bannervps)
 else
 banner="Não há um banner no momento"
-fi
+exit
 echo -e "\033[1;32mBanner atual\n\n\033[1;37m$banner\n\033[0m"
 echo "Qual banner deseja adicionar (ctrl + c para sair )"
 read -p ": " bannervps
 echo "$bannervps" > /etc/r3v1v3r/bannervps
 service ssh restart 1> /dev/null 2>/dev/null
 service sshd restart 1>/dev/null 2>/dev/null
+fi
