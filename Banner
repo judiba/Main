@@ -17,7 +17,7 @@ echo "Entre em contato pelo Telegram @$telegram" >> $local
 echo "|Config by: @judiba|" >> $local
 echo "|R3V1V3R VPS|" >> $local
 else
-echo "Banner /etc/r3v1v3r/bannervps" >> /etc/ssh/sshd_config
+echo "Banner /etc/bannervps" >> /etc/ssh/sshd_config
 service ssh restart > /dev/null 2> /dev/null
 service sshd restart > /dev/null 2> /dev/null
 fi
