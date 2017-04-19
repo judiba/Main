@@ -150,12 +150,17 @@ then
 clear
 echo '-----Script By @judiba-----'
 echo '------Para o Debian 8------'
+echo "Versão instalada"
 cat /etc/debian_version
 echo "Substituindo os repositorios..."
+sleep 3
+echo "Atualizando os repositorios..."
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
 echo "Atualizando a VPS..."
+echo ""
+sleep 3
 echo "Aguarde... "
 sleep 3
 apt-get update -y 1>/dev/null 2>/dev/null
