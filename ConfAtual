@@ -27,7 +27,7 @@ if [ "$numero" = "1" ]
 then
 clear
 echo '-----Script By @judiba-----'
-echo '------Para o Ubunutu 14-----'
+echo '--Ubuntu 14 para o Ubunutu 16--'
 apt-get install update-manager-core
 apt-get update -y 1>/dev/null 2>/dev/null
 do-release-upgrade -d -y 1>/dev/null 2>/dev/null
@@ -68,7 +68,7 @@ if [ "$numero" = "2" ]
 then
 clear
 echo '-----Script By @judiba-----'
-echo '------Para o Debian8------'
+echo '------Para o Ubuntu 16-----'
 cat /etc/debian_version
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
@@ -82,7 +82,7 @@ apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
 apt-get autoremove -y 1>/dev/null 2>/dev/null
 apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /etc/debian_version
-echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+echo "O número acima mostra a versão atual do Ubuntu. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
 then
@@ -108,7 +108,7 @@ if [ "$numero" = "3" ]
 then
 clear
 echo '-----Script By @judiba-----'
-echo '-----Debian 7 para Debian 8
+echo '-----Debian 7 para Debian 8'
 cat /etc/debian_version
 echo "Substituindo os repositorios..."
 apt-get update -y 1>/dev/null 2>/dev/null
@@ -149,7 +149,7 @@ if [ "$numero" = "4" ]
 then
 clear
 echo '-----Script By @judiba-----'
-echo '------Para o Debian8------'
+echo '------Para o Debian 8------'
 cat /etc/debian_version
 echo "Substituindo os repositorios..."
 apt-get update -y 1>/dev/null 2>/dev/null
@@ -190,7 +190,7 @@ if [ "$numero" = "5" ]
 then
 clear
 echo '-----Script By @judiba-----'
-echo '------Para o Debian8------'
+echo '------Para o CentOS 6.8------'
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
@@ -203,7 +203,7 @@ apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
 apt-get autoremove -y 1>/dev/null 2>/dev/null
 apt-get autoclean -y 1>/dev/null 2>/dev/null
 cat /proc/version
-echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+echo "O número acima mostra a versão atual do CentOS. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
 then
