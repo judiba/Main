@@ -1,5 +1,6 @@
 #!/bin/bash
-
+VERSION=`lsb_release -sd | cut -c 8-`
+echo Versao do seu sistema operacional: ${VERSION}
 echo "Configuração de Atualização"
 echo ""
 echo "        BY: @judiba"
@@ -10,9 +11,6 @@ echo " "
 read -p "De enter para continuar..."
 clear
 echo "Escolha o sistema da sua VPS"
-VERSION='lsb_release -sd | cut -c 8-'
-echo Versao do seu sistema operacional: ${VERSION}
-echo ""
 echo -e "\033[1;34m
 [1] Ubuntu 14
 [2] Ubuntu 16
