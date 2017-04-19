@@ -10,8 +10,9 @@ echo " "
 read -p "De enter para continuar..."
 clear
 echo "Escolha o sistema da sua VPS"
-echo " "
-
+VERSION='lsb_release -sd | cut -c 8-'
+echo Versao do seu sistema operacional: ${VERSION}
+echo ""
 echo -e "\033[1;34m
 [1] Ubuntu 14
 [2] Ubuntu 16
@@ -23,11 +24,77 @@ echo ""
 read -p "Escolha o numero da sua opção: " numero
 
 if [ "$numero" = "1" ]
+cat /proc/version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+shutdown -r 5 1>/dev/null 2>/dev/null
+clear
+echo "Aguarde reiniciando..."
+fi
 
+if [ "$ta" = "n" ]
+then
+clear
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi Atualizado com sucesso! Lembre-se de reiniciar assim que possivel"
+sleep 3
+echo " Saindo..."
+sleep 2
+PackVPS
+fi
+
+fi
 if [ "$numero" = "2" ]
+cat /proc/version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+shutdown -r 5 1>/dev/null 2>/dev/null
+clear
+echo "Aguarde reiniciando..."
+fi
 
+if [ "$ta" = "n" ]
+then
+clear
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi Atualizado com sucesso! Lembre-se de reiniciar assim que possivel"
+sleep 3
+echo " Saindo..."
+sleep 2
+PackVPS
+fi
+
+fi
 if [ "$numero" = "3" ]
+cat /proc/version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+shutdown -r 5 1>/dev/null 2>/dev/null
+clear
+echo "Aguarde reiniciando..."
+fi
 
+if [ "$ta" = "n" ]
+then
+clear
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi Atualizado com sucesso! Lembre-se de reiniciar assim que possivel"
+sleep 3
+echo " Saindo..."
+sleep 2
+PackVPS
+fi
+
+fi
 if [ "$numero" = "4" ]
 then
 clear
@@ -44,7 +111,7 @@ apt-get upgrade -y 1>/dev/null 2>/dev/null
 apt-get dist-upgrade -y 1>/dev/null 2>/dev/null
 apt-get autoremove -y 1>/dev/null 2>/dev/null
 apt-get autoclean -y 1>/dev/null 2>/dev/null
-cat /etc/debian_version
+cat /proc/version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
 read -p "Reiniciar sistema Agora? [ s/n ]: " ta
  if [ "$ta" = "s" ]
@@ -68,7 +135,29 @@ fi
 
 fi
 if [ "$numero" = "5" ]
+cat /proc/version
+echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
+read -p "Reiniciar sistema Agora? [ s/n ]: " ta
+ if [ "$ta" = "s" ]
+then
+shutdown -r 5 1>/dev/null 2>/dev/null
+clear
+echo "Aguarde reiniciando..."
+fi
 
+if [ "$ta" = "n" ]
+then
+clear
+echo " Sucesso... "
+sleep 3
+echo " Seu servidor foi Atualizado com sucesso! Lembre-se de reiniciar assim que possivel"
+sleep 3
+echo " Saindo..."
+sleep 2
+PackVPS
+fi
+
+fi
 if [ "$numero" = "6" ]
 then
 clear
