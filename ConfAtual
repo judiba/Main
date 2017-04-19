@@ -1,4 +1,5 @@
 #!/bin/bash
+echo ""
 VERSION=`lsb_release -sd | cut -c 8-`
 echo Versao do seu sistema operacional: ${VERSION}
 echo ""
