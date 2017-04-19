@@ -68,7 +68,6 @@ sleep 2
 PackVPS
 fi
 
-fi
 if [ "$numero" = "3" ]
 cat /proc/version
 echo "O número acima mostra a versão atual do Debian. É altamente recomendável que você reinicie o sistema."
@@ -92,7 +91,6 @@ sleep 2
 PackVPS
 fi
 
-fi
 if [ "$numero" = "4" ]
 then
 clear
@@ -155,7 +153,6 @@ sleep 2
 PackVPS
 fi
 
-fi
 if [ "$numero" = "6" ]
 then
 clear
