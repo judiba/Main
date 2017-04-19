@@ -184,7 +184,7 @@ clear
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "PackVPS 1.0" ; tput sgr0
 echo ""
 echo -e OBS:    Digite - PackVPS - para acessar esse PACK
-echo -e Escolha uma opaco:    Para Sair Ctrl + C
+echo -e Escolha uma opação:    Para Sair Ctrl + C
 echo -e "[00]\033[01;36m•====> ConfAtual (CONFIGURAÇÃO DE ATUALIZAÇÃO DA VPS) \033[0m"
 echo -e "[01]\033[01;36m•====> Configurar (CONFIGURA A VPS|OpenSSH|SQUID|) \033[0m"
 echo -e "[02]\033[01;36m•====> UserCreate (Criar Usuarios Teste e SSH)\033[0m"
@@ -213,7 +213,7 @@ echo -e "[24]\033[01;36m•====> Dropbear (Ativa o Dropbear SSH para NETFLIX)\03
 echo -e "[25]\033[01;36m•====> TCPTweaker (Melhora a velocidade e desempenho da VPS)\033[0m"
 echo -e "[26]\033[01;36m•====> Desinstalar (Remove o PackVPS por completo)\033[0m"
 
-read -p " Selecione a opcao [00-26]: " opcao
+read -p " Selecione uma opção [00-26]: " opcao
 
 case $opcao in
  00)
@@ -348,8 +348,8 @@ case $opcao in
   rm -rf /bin/sshmonitor 2>/dev/null
   rm -rf /bin/vpspack 2>/dev/null
   rm -rf /bin/PackVPS 2>/dev/null
-  rm -r InstallPackVPS
-  rm -r jcameron-key.asc
+  rm InstallPackVPS
+  rm jcameron-key.asc
   sed '/PackVPS/d' .bashrc
   clear;;  
 esac
