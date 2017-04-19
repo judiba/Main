@@ -143,6 +143,8 @@ then
 clear
 echo '-----Script By @judiba-----'
 echo '------Para o Debian8------'
+cat /etc/debian_version
+echo "Substituindo os repositorios..."
 apt-get update -y 1>/dev/null 2>/dev/null
 apt-get upgrade -y 1>/dev/null 2>/dev/null
 wget -q https://raw.githubusercontent.com/judiba/Main/master/debian8 -O /etc/apt/sources.list
