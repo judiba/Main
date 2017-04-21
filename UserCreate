@@ -11,9 +11,9 @@ read -p "De enter para continuar..."
 clear
 echo "        Escolha a abaixo"
 echo ""
-[1] Criar Usuário TESTE ;;
-[2] Criar Usuário SSH ;;
-[3] Sair ;;
+[1] Criar Usuário Teste
+[2] Criar Usuário SSH
+[3] Sair
 [*] "Opção desconhecida." ; echo ; Principal ;;
   esac
 }
