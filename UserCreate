@@ -1,5 +1,4 @@
 #!/bin/bash
-Principal() {
 echo "Criar Usuários"
 echo ""
 echo "        BY: @judiba"
@@ -14,12 +13,8 @@ echo ""
 [1] Criar Usuário Teste
 [2] Criar Usuário SSH
 [3] Sair
-[*] "Opção desconhecida." ; echo ; Principal ;;
-  esac
-}
-echo " "
+echo ""
 read -p "Escolha o numero da sua opção: " numero
-
 if [ "$numero" = "1" ]
 then
 function criarusuarioteste(){
