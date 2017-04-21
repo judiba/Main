@@ -1,4 +1,13 @@
 #!/bin/bash
+echo "Criar Usuários"
+echo ""
+echo "        BY: @judiba"
+echo "        R3V1V3R VPS"
+echo "        Data de criação: 18/04/2017"
+echo "        Nome: PackVPS 1.0"
+echo ""
+read -p "De enter para continuar..."
+clear
 tput setaf 8 ; tput setab 5; tput bold ; printf '%30s%s%-15s\n' "Criar Usuário SSH" ; tput sgr0
 echo ""
 read -p "Nome do usuário: " username
