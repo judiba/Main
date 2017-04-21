@@ -1,4 +1,57 @@
 #!/bin/bash
+Principal() {
+echo "Criar Usuários"
+echo ""
+echo "        BY: @judiba"
+echo "        R3V1V3R VPS"
+echo "        Data de criação: 18/04/2017"
+echo "        Nome: PackVPS 1.0"
+echo ""
+read -p "De enter para continuar..."
+clear
+echo "        Escolha a abaixo"
+echo ""
+[1] Criar Usuário TESTE ;;
+[2] Criar Usuário SSH ;;
+[3] Sair ;;
+[*] "Opção desconhecida." ; echo ; Principal ;;
+  esac
+}
+echo " "
+read -p "Escolha o numero da sua opção: " numero
+
+if [ "$numero" = "1" ]
+then
+function criarusuarioteste(){
+touch /etc/r3v1v3r/usuariosteste 1>/dev/null 2>/dev/null
+echo -e "   Usuarios teste"
+for testus in $(ls /etc/r3v1v3r/usuariosteste |sort |sed 's/.sh//g')
+do
+echo "$testus"
+done
+printf "\n"
+printf "Nome do novo usuario: "; read nome
+printf "Senha do usuario: "; read pass
+echo -e "\nUse s = segundos, m = minutos, h = horas e d = dias EX: 14s ."
+printf "Quanto tempo usuario $nome deve durar: ";read tempoin
+tempo=$(echo "$tempoin" |sed 's/ //g')
+useradd -M -s /bin/false $nome
+(echo $pass;echo $pass) |passwd $nome 1>/dev/null 2>/dev/null
+echo "#!/bin/bash
+sleep $tempo
+kill"' $(ps -u '"$nome |awk '{print"' $1'"}') 1>/dev/null 2>/dev/null
+userdel --force $nome
+rm -rf /etc/r3v1v3r/usuariosteste/$nome.sh
+exit" > /etc/r3v1v3r/usuariosteste/$nome.sh
+echo -e "Usuario: $nome
+Senha: $pass
+Validade: $tempo\n
+Apos o tempo expirar o usuario sera deletado e todos serão desconectados."
+bash /etc/r3v1v3r/usuariosteste/$nome.sh &
+exit
+}
+if [ "$numero" = "2" ]
+then
 tput setaf 8 ; tput setab 5; tput bold ; printf '%30s%s%-15s\n' "Criar Usuário SSH" ; tput sgr0
 echo ""
 read -p "Nome do usuário: " username
@@ -92,4 +145,9 @@ else
 			fi
 		fi
 	fi	
+fi
+fi
+if [ "$numero" = "3" ]
+then
+exit
 fi
