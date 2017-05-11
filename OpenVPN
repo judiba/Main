@@ -32,7 +32,6 @@ touch /etc/pam.d/openvpn
 echo "
 auth    required        pam_unix.so    shadow    nodelay
 auth    requisite       pam_succeed_if.so uid >= 500 quiet
-#auth    requisite       pam_succeed_if.so user ingroup openclient quiet
 account required        pam_unix.so" >> /etc/pam.d/openvpn
 clear
 
@@ -426,7 +425,7 @@ elif [[ "$resposta" = '2' ]]; then
         echo "$CLIENT $validade">> /root/openclientes.db
 	echo "$CLIENT $validade">> /etc/r3v1v3r/backupOpenclientes.db
         echo "O Certificado do usuário $CLIENT está disponível em /var/www/html/openvpn/$CLIENT.zip"
-        echo "Para verificar basta acessar: http://vps1.jgnet.tk:88/openvpn/"
+        echo "Para verificar basta acessar: http://$IP:88/openvpn/"
         echo "Para pegar este arquivo.ovpn use o navegador"
         echo " "
         echo "--------------------------------------------"
