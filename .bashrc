@@ -99,8 +99,6 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
-bash screenfetch-dev
-force_color_prompt=yes
 screenfetch
 figlet R3V1V3R VPS
 bash MenuVPS.sh
