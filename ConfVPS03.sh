@@ -13,8 +13,8 @@ echo -e "\033[01;36m       BY: @judiba
 echo ""
 read -p "De enter para continuar..."
 clear
-read -p "Deseja instalar Dropbear em sua VPS? [ s/n ] : " sn
-if [ "$sn" = "s" ]
+read -p "Deseja instalar Dropbear em sua VPS? [ s/n ] : " ta
+if [ "$ta" = "s" ]
 then
 clear
 echo -e "\033[46;1;37m Instalando Dropbear aguarde \033[0m"
@@ -27,7 +27,7 @@ clear
 echo -e "\033[46;1;37m Dropbear configurado com sucesso nas portas 109 e 110 porém trabalhando na porta 443 via SSLH !!!\033[0m"
 fi
 exit
-if [ "$sn" = "n" ]
+if [ "$ta" = "n" ]
 then
 clear
 echo "Saindo..."
