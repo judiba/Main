@@ -115,4 +115,4 @@ clear
 read -p 'De enter para continuar...'
 clear
 
-bash /bin/PackVPS.sh
+bash PackVPS.sh
