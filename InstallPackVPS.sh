@@ -62,43 +62,25 @@ echo ""
 echo ""
 echo -e "\033[0;31m INSTALANDO...\033[0;31m"
 apt-get update -y 1>/dev/null 2>/dev/null
-apt-get install nano
-apt-get install htop
 apt-get install screenfetch -y
 apt-get install figlet -y
 rm .bashrc
 wget https://raw.githubusercontent.com/judiba/Main/master/.bashrc
 clear
 apt-get install python-pip -y
-pip install speedtest-cli
-apt-get install nethogs -y
-apt-get install nload
 apt-get install unzip -y
 apt-get install sudo -y
 apt-get install zip -y
 clear
-wget http://www.webmin.com/jcameron-key.asc
-apt-key add jcameron-key.asc
-apt-get update -y 1>/dev/null 2>/dev/null
-clear
-apt-get install apt-transport-https -y
-apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python -y
-dpkg-reconfigure tzdata
+wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh && -O /bin/PackVPS.sh
+chmod +x /bin/PackVPS.sh
+
 echo -e "\033[0;31m FINALIZANDO...\033[0;31m"
 sleep 2
-service exim4 stop
-apt-get -y --purge remove exim4*
-apt-get -y --purge remove samba*
-apt-get -y --purge remove sendmail*
-apt-get -y --purge remove bind9*
-apt-get autoclear -y 1>/dev/null 2>/dev/null
-iptables -F
-clear
-
 echo -e '\033[1;34mFinal da instalação...\033[0m'
 sleep 3
 clear
 read -p 'De enter para continuar...'
 clear
-wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh && -O /bin/PackVPS.sh
+
 bash PackVPS.sh
