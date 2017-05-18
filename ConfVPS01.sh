@@ -7,7 +7,7 @@ echo -e "\033[01;34mConfVPS01"
 echo ""
 echo -e "\033[01;36m       BY: @judiba                 
        R3V1V3R VPS                 
-       Data de criação: 26/04/2017 
+       Data de Atualização: 18/05/2017 
        OpenSSH e SQUID
        Nome: PackVPS 2.0           \033[1;37m"
 echo ""
