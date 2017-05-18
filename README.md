@@ -13,3 +13,10 @@ Obs.:
 1> Não me resposabilizo por problemas decorrentes do uso deste script.
 2> Não dou suporte ao seu funcionamento.
 3> Caso queira fazer alguma modificação e ou alteração informe para que possa ser verificado e continuar contribuino com o projeto.
+
+18/05
+Instruções para instalação:
+
+wget https://raw.githubusercontent.com/judiba/Main/master/InstallPackVPS.sh && bash InstallPackVPS
+
+Obs.: Não está completo e estou testando inicialmente com o Debian 8
