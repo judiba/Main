@@ -17,6 +17,6 @@ Obs.:
 18/05
 Instruções para instalação:
 
-wget https://raw.githubusercontent.com/judiba/Main/master/InstallPackVPS.sh && bash InstallPackVPS
+wget https://raw.githubusercontent.com/judiba/Main/master/InstallPackVPS.sh && bash InstallPackVPS.sh
 
 Obs.: Não está completo e estou testando inicialmente com o Debian 8
