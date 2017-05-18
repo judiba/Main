@@ -26,7 +26,7 @@ echo -e "\033[01;34mInstallPack"
 echo ""
 echo -e "\033[01;36m       BY: @judiba                 
        R3V1V3R VPS                 
-       Data de criação: 22/04/2017 
+       Data de criação: 18/05/2017 
        Nome: PackVPS 2.0           \033[0m"
 echo ""
 read -p "De enter para continuar..."
@@ -73,7 +73,39 @@ apt-get install sudo -y
 apt-get install zip -y
 clear
 wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh && -O /bin/PackVPS.sh
-chmod +x /bin/PackVPS.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS00.sh
+chmod +x /bin/ConfVPS00.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS01.sh
+chmod +x /bin/ConfVPS01.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS02.sh
+chmod +x /bin/ConfVPS02.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS03.sh
+chmod +x /bin/ConfVPS03.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS04.sh
+chmod +x /bin/ConfVPS04.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS05.sh
+chmod +x /bin/ConfVPS05.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS06.sh
+chmod +x /bin/ConfVPS06.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS07.sh
+chmod +x /bin/ConfVPS07.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS08.sh
+chmod +x /bin/ConfVPS08.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS09.sh
+chmod +x /bin/ConfVPS09.sh
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS10.sh
+chmod +x /bin/ConfVPS10.sh
 
 echo -e "\033[0;31m FINALIZANDO...\033[0;31m"
 sleep 2
@@ -83,4 +115,4 @@ clear
 read -p 'De enter para continuar...'
 clear
 
-bash PackVPS.sh
+bash /bin/PackVPS.sh
