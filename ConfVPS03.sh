@@ -26,11 +26,11 @@ sleep 3
 clear
 echo -e "\033[46;1;37m Dropbear configurado com sucesso nas portas 109 e 110 porém trabalhando na porta 443 via SSLH !!!\033[0m"
 fi
-exit 0
+exit
 if [ "$sn" = "n" ]
 then
 clear
 echo "Saindo..."
 sleep 4
-exit 1
+exit 69
 fi
