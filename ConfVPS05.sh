@@ -124,7 +124,7 @@ echo -e '\033[01;33m[4]\033[01;32m Desinstalar o OpenVPN.\033[0m'
 echo -e '\033[01;33m[5]\033[01;32m Renovar usuário OpenVPN.'
 echo -e '\033[05;31m-------------------------------------------------------\033[00;37m'
 echo ""
-read -p "Responda: " -e -i
+read -p "Responda: "
 if [[ "$resposta" = '1' ]]; then
 	clear
 	if [[ -e /etc/openvpn/server.conf ]]; then
