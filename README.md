@@ -20,3 +20,7 @@ Instruções para instalação:
 wget https://raw.githubusercontent.com/judiba/Main/master/InstallPackVPS.sh && bash InstallPackVPS.sh
 
 Obs.: Não está completo e estou testando inicialmente com o Debian 8
+
+Para instalar apenas o OpenVPN com suporte a VIVO e Claro e sem necessidade do uso de sftp via celular. O arquivo ficara disponivel via web.
+
+wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS05.sh && bash ConfVPS05.sh
