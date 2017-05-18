@@ -21,7 +21,6 @@ echo " Saindo..."
 sleep 4
 exit
 fi
-
 if [ "$s" = "s" ]
 then
 clear
