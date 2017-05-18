@@ -65,47 +65,17 @@ apt-get update -y 1>/dev/null 2>/dev/null
 apt-get install screenfetch -y
 apt-get install figlet -y
 rm .bashrc
+rm screenfetch-dev
 wget https://raw.githubusercontent.com/judiba/Main/master/.bashrc
+wget https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
 clear
 apt-get install python-pip -y
 apt-get install unzip -y
 apt-get install sudo -y
 apt-get install zip -y
 clear
-wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh && -O /bin/PackVPS.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS00.sh
-chmod +x /bin/ConfVPS00.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS01.sh
-chmod +x /bin/ConfVPS01.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS02.sh
-chmod +x /bin/ConfVPS02.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS03.sh
-chmod +x /bin/ConfVPS03.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS04.sh
-chmod +x /bin/ConfVPS04.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS05.sh
-chmod +x /bin/ConfVPS05.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS06.sh
-chmod +x /bin/ConfVPS06.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS07.sh
-chmod +x /bin/ConfVPS07.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS08.sh
-chmod +x /bin/ConfVPS08.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS09.sh
-chmod +x /bin/ConfVPS09.sh
-
-wget https://raw.githubusercontent.com/judiba/Main/master/ConfVPS00.sh && -O /bin/ConfVPS10.sh
-chmod +x /bin/ConfVPS10.sh
+wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh -O /bin/PackVPS.sh
+chmod +x /bin/PackVPS.sh
 
 echo -e "\033[0;31m FINALIZANDO...\033[0;31m"
 sleep 2
