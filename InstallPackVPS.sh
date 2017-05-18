@@ -2,16 +2,6 @@
 #R3V1V3R VPS
 #Data de criação: 22/04/2017
 #Nome: InstallPack - PackVPS 2.0"
-clear
-echo -e "\033[01;34mInstallPack"
-echo ""
-echo -e "\033[01;36m       BY: @judiba                 
-       R3V1V3R VPS                 
-       Data de criação: 22/04/2017 
-       Nome: PackVPS 2.0           \033[0m"
-echo ""
-read -p "De enter para continuar..."
-clear
 
 corPadrao="\033[0m"
 preto="\033[0;30m"
@@ -30,6 +20,17 @@ azulClaro="\033[1;34m"
 purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
+
+clear
+echo -e "\033[01;34mInstallPack"
+echo ""
+echo -e "\033[01;36m       BY: @judiba                 
+       R3V1V3R VPS                 
+       Data de criação: 22/04/2017 
+       Nome: PackVPS 2.0           \033[0m"
+echo ""
+read -p "De enter para continuar..."
+clear
 
 echo -e "\033[1;30m----------------------------------------------------------------------\033[0m"
 echo -e "\033[1;37m                           .                                          \033[0m"
@@ -83,6 +84,8 @@ clear
 apt-get install apt-transport-https -y
 apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python -y
 dpkg-reconfigure tzdata
+echo -e "\033[0;31m FINALIZANDO...\033[0;31m"
+sleep 2
 service exim4 stop
 apt-get -y --purge remove exim4*
 apt-get -y --purge remove samba*
@@ -97,4 +100,5 @@ sleep 3
 clear
 read -p 'De enter para continuar...'
 clear
+wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh && -O /bin/PackVPS.sh
 bash PackVPS.sh
