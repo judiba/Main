@@ -5,19 +5,19 @@
 clear
 echo -e "\033[01;34mConfVPS03"
 echo ""
-echo -e "\033[01;36m       BY: @judiba                 
-       R3V1V3R VPS                 
+echo -e "\033[01;36m       BY: @judiba
+       R3V1V3R VPS
        Data de Atualização: 18/05/2017 
        DROPBEAR
        Nome: PackVPS 2.0           \033[1;37m"
 echo ""
 read -p "De enter para continuar..."
 clear
-read -p " Deseja instalar Dropbear em sua VPS? [ s/n ] : " s
+read -p "Deseja instalar Dropbear em sua VPS? [ s/n ] : " s
 if [ "$s" = "n" ]
 then
 clear
-echo " Saindo..."
+echo "Saindo..."
 sleep 4
 exit
 fi
