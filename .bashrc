@@ -101,4 +101,3 @@ fi
 #fi
 screenfetch
 figlet R3V1V3R VPS
-bash MenuVPS.sh
