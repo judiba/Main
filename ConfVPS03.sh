@@ -13,9 +13,7 @@ echo -e "\033[01;36m       BY: @judiba
 echo ""
 read -p "De enter para continuar..."
 clear
-
 read -p " Deseja instalar Dropbear em sua VPS? [ s/n ] : " s
-
 if [ "$s" = "n" ]
 then
 clear
