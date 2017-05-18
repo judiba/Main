@@ -422,14 +422,14 @@ elif [[ "$resposta" = '2' ]]; then
         clear
         validade=("$ano$mes$dia")
         echo "$CLIENT $validade">> /root/openclientes.db
-	    echo "$CLIENT $validade">> /etc/r3v1v3r/backupOpenclientes.db
+	echo "$CLIENT $validade">> /etc/r3v1v3r/backupOpenclientes.db
         echo "O Certificado do usuário $CLIENT está disponível em /var/www/html/openvpn/$CLIENT.zip"
         echo "Para verificar basta acessar: http://$IP:88/openvpn/"
         echo "Para pegar este arquivo.ovpn use o navegador"
         echo " "
         echo "--------------------------------------------"
         echo "Usuário OpenVPN $CLIENT criado com sucesso"
-	    echo "a validade do cliente $CLIENT é: $dia/$mes/$ano"
+	echo "a validade do cliente $CLIENT é: $dia/$mes/$ano"
         echo "IP do servidor: $IP"
         echo "--------------------------------------------"
 elif [[ "$resposta" = '3' ]]; then
