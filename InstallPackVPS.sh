@@ -74,8 +74,7 @@ apt-get install unzip -y
 apt-get install sudo -y
 apt-get install zip -y
 clear
-wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh -O /bin/PackVPS.sh
-chmod +x /bin/PackVPS.sh
+wget https://raw.githubusercontent.com/judiba/Main/master/PackVPS.sh -o /bin/PackVPS.sh
 
 echo -e "\033[0;31m FINALIZANDO...\033[0;31m"
 sleep 2
