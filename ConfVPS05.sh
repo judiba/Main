@@ -134,7 +134,7 @@ if [[ "$resposta" = '1' ]]; then
 	clear
 	echo "Script original: https://github.com/Nyr/openvpn-install"
 	echo ""
-	echo "Primeiro eu preciso saber o endereço IPv4 da interface de rede externa do seu servidor."
+	echo "Primeiro precisa confirmar o seu endereço IPv4 da interface de rede externa do seu servidor."
 	read -p "Endereço IP: " -e -i $IP IP
 	echo ""
 	echo "Em qual porta você quer rodar o OpenVPN?"
